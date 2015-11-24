@@ -22,61 +22,63 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor grayColor];
+    [self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
     
     
     int height = [self.view bounds].size.width/3*2.; // 220;
     int width = [self.view bounds].size.width; //320;
     PCPieChart *pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/2,([self.view bounds].size.height-height)/2,width,height)];
+    [pieChart setShowArrow:NO];
+    [pieChart setSameColorLabel:NO];
     [pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
-    [pieChart setDiameter:width/2];
-    [pieChart setSameColorLabel:YES];
-    
+    [pieChart setDiameter:width / 2];
     [self.view addSubview:pieChart];
     
-//    NSMutableArray *components = [NSMutableArray array];
-//    PCPieComponent *component  = [[PCPieComponent alloc]initWithTitle:@"测试" value:90];
-//    component.title = @"AAAA";
-//    component.value = 40;
-//    component.startDeg = 10;
-//    component.endDeg = 20;
-//    [component setColour:PCColorGreen];
-//    [components addObject:component];
-//    [pieChart setComponents:components];
-
-       
+    
     NSString *sampleFile = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"sample_piechart_data.plist"];
     NSDictionary *sampleInfo = [NSDictionary dictionaryWithContentsOfFile:sampleFile];
-    
     NSMutableArray *components = [NSMutableArray array];
     for (int i=0; i<[[sampleInfo objectForKey:@"data"] count]; i++)
     {
         NSDictionary *item = [[sampleInfo objectForKey:@"data"] objectAtIndex:i];
-        PCPieComponent *component = [PCPieComponent pieComponentWithTitle:[item objectForKey:@"title"] value:[[item objectForKey:@"value"] floatValue]];
-        component.startDeg = 100;
-        component.endDeg = 200;
+        PCPieComponent *component = [PCPieComponent pieComponentWithTitle:nil value:[[item objectForKey:@"value"] floatValue]];
         [components addObject:component];
         
         if (i==0)
         {
-            [component setColour:PCColorYellow];
+            [component setColour:[UIColor redColor]];
+            _zongjianLab.text = [[item objectForKey:@"value"] stringValue];
+            CGFloat value = [[item objectForKey:@"value"]floatValue] *150 / 100;
+            CGRect rect = _zongjianView.frame;
+            rect.size.width = value;
+            _zongjianView.frame = rect;
         }
         else if (i==1)
         {
-            [component setColour:PCColorGreen];
+            [component setColour:[UIColor blueColor]];
+            _jingyouLab.text = [[item objectForKey:@"value"] stringValue];
+            CGFloat value = [[item objectForKey:@"value"]floatValue] *150 / 100;
+            CGRect rect = _jingyouView.frame;
+            rect.size.width = value;
+            _jingyouView.frame = rect;
         }
         else if (i==2)
         {
-            [component setColour:PCColorOrange];
+            [component setColour:[UIColor greenColor]];
+            _qitaLab.text = [[item objectForKey:@"value"] stringValue];
+            CGFloat value = [[item objectForKey:@"value"]floatValue] *150 / 100;
+            CGRect rect = _qitaView.frame;
+            rect.size.width = value;
+            _qitaView.frame = rect;
         }
-        else if (i==3)
-        {
-            [component setColour:PCColorRed];
-        }
-        else if (i==4)
-        {
-            [component setColour:PCColorBlue];
-        }
+//        else if (i==3)
+//        {
+//            [component setColour:PCColorRed];
+//        }
+//        else if (i==4)
+//        {
+//            [component setColour:PCColorBlue];
+//        }
     }
     [pieChart setComponents:components];
     

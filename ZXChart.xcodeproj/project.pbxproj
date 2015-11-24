@@ -17,7 +17,6 @@
 		945F7DB41C0432C000F9FFED /* BingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945F7DB31C0432C000F9FFED /* BingViewController.m */; };
 		945F7DB71C0432CD00F9FFED /* ZhuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945F7DB61C0432CD00F9FFED /* ZhuViewController.m */; };
 		94B098F01C0439AB0096EDB9 /* sample_piechart_data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94B098EF1C0439AB0096EDB9 /* sample_piechart_data.plist */; };
-		94B098F31C043B7D0096EDB9 /* Bing_2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B098F21C043B7D0096EDB9 /* Bing_2ViewController.m */; };
 		94B0990D1C0445AC0096EDB9 /* EColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B099001C0445AC0096EDB9 /* EColumn.m */; };
 		94B0990E1C0445AC0096EDB9 /* EColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B099021C0445AC0096EDB9 /* EColor.m */; };
 		94B0990F1C0445AC0096EDB9 /* EColumnDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B099041C0445AC0096EDB9 /* EColumnDataModel.m */; };
@@ -62,8 +61,6 @@
 		945F7DB51C0432CD00F9FFED /* ZhuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuViewController.h; sourceTree = "<group>"; };
 		945F7DB61C0432CD00F9FFED /* ZhuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuViewController.m; sourceTree = "<group>"; };
 		94B098EF1C0439AB0096EDB9 /* sample_piechart_data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sample_piechart_data.plist; sourceTree = "<group>"; };
-		94B098F11C043B7D0096EDB9 /* Bing_2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bing_2ViewController.h; sourceTree = "<group>"; };
-		94B098F21C043B7D0096EDB9 /* Bing_2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bing_2ViewController.m; sourceTree = "<group>"; };
 		94B098FF1C0445AC0096EDB9 /* EColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumn.h; sourceTree = "<group>"; };
 		94B099001C0445AC0096EDB9 /* EColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumn.m; sourceTree = "<group>"; };
 		94B099011C0445AC0096EDB9 /* EColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColor.h; sourceTree = "<group>"; };
@@ -137,8 +134,6 @@
 				945F7D941C04305E00F9FFED /* ViewController.m */,
 				945F7DB21C0432C000F9FFED /* BingViewController.h */,
 				945F7DB31C0432C000F9FFED /* BingViewController.m */,
-				94B098F11C043B7D0096EDB9 /* Bing_2ViewController.h */,
-				94B098F21C043B7D0096EDB9 /* Bing_2ViewController.m */,
 				945F7DB51C0432CD00F9FFED /* ZhuViewController.h */,
 				945F7DB61C0432CD00F9FFED /* ZhuViewController.m */,
 				94F93EAB1C0436A700D595EF /* Lib */,
@@ -344,7 +339,6 @@
 				94B0991D1C0446CA0096EDB9 /* ELineChart.m in Sources */,
 				94B099231C0447580096EDB9 /* UICountingLabel.m in Sources */,
 				945F7DB71C0432CD00F9FFED /* ZhuViewController.m in Sources */,
-				94B098F31C043B7D0096EDB9 /* Bing_2ViewController.m in Sources */,
 				94B0991F1C0446CA0096EDB9 /* EViewSwitcher.m in Sources */,
 				94B099101C0445AC0096EDB9 /* EColumnChartLabel.m in Sources */,
 				94F93EAE1C0436BA00D595EF /* PCPieChart.m in Sources */,

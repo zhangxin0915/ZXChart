@@ -27,8 +27,6 @@
 - (IBAction)btn_bing:(UIButton *)sender {
 }
 
-- (IBAction)btn_bing2:(UIButton *)sender {
-}
 
 - (IBAction)btn_zhu:(UIButton *)sender {
 }
