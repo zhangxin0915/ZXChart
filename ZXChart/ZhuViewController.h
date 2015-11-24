@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ZhuViewController : UIViewController
+- (IBAction)bnt_right:(UIButton *)sender;
+- (IBAction)bnt_left:(UIButton *)sender;
 
 @end

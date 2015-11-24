@@ -36,7 +36,6 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor grayColor];
     
     NSMutableArray *temp = [NSMutableArray array];
     for (int i = 0; i < 50; i++)
@@ -53,8 +52,6 @@
     [_eColumnChart setColumnsIndexStartFromLeft:YES];
     [_eColumnChart setDelegate:self];
     [_eColumnChart setDataSource:self];
-    
-    
     [self.view addSubview:_eColumnChart];
 
 }
@@ -136,17 +133,7 @@
     }
 }
 
-- (IBAction)leftButtonPressed:(id)sender
-{
-    if (self.eColumnChart == nil) return;
-    [self.eColumnChart moveLeft];
-}
 
-- (IBAction)rightButtonPressed:(id)sender
-{
-    if (self.eColumnChart == nil) return;
-    [self.eColumnChart moveRight];
-}
 
 
 #pragma -mark- EColumnChartDataSource
@@ -283,4 +270,16 @@ fingerDidLeaveColumn:(EColumn *)eColumn
 }
 */
 
+
+- (IBAction)bnt_right:(UIButton *)sender {
+
+    if (self.eColumnChart == nil) return;
+    [self.eColumnChart moveRight];
+}
+
+- (IBAction)bnt_left:(UIButton *)sender {
+
+    if (self.eColumnChart == nil) return;
+    [self.eColumnChart moveLeft];
+}
 @end
